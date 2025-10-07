@@ -49,12 +49,14 @@ header {
     display: block;/* hace que el input ocupe toda la linea */
     padding: 8px;/* espacio interno */
     width: 50%;/* ancho del input */
-    max-width: 300px;/* ancho maximo */
+    max-width: 400px;/* ancho máximo para pantallas grandes */
     border: 1.5px solid var(--color-accent);/* borde morado */
     border-radius: 4px;/* bordes redondeados */
     font-size: 1rem;/* tamaño de fuente */
     background-color: var(--color-bg);/* color de fondo oscuro */
     color: var(--color-text);/* color del texto claro */
+    margin-left: auto; /* centra el input horizontalmente */
+    margin-right: auto; /* centra el input horizontalmente */
 }
 
 .juego-img {
