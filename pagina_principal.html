@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SteamHub - Tienda de Juegos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">SteamHub
+        <img src="imagenes/logo.png" alt="Logo de SteamHub" class="logo-img">
+    </div>
+    <!--Navegador de las demas paginas -->
+    <nav>
+        <button class="headerb"><a href="index.html">Inicio</a></button>
+        <button class="headerb"><a href="#catalogo">Tienda</a></button>
+        <button class="headerb"><a href="carrito.html">Carrito</a></button>
+        <button class="headerb"><a href="login.html">Iniciar sesión</a></button>
+    </nav>
+    <input type="text" placeholder="Buscar juegos..." id="buscador" class="buscador">
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>Bienvenido a SteamHub</h1>
+    <p>Descubre los mejores videojuegos al mejor precio</p><br>
+    <button>Explorar Tienda</button>
+  </section>
+
+  <!-- Catálogo -->
+  <main id="catalogo">
+    <h2>Juegos Destacados</h2>
+    <div class="grid-juegos">
+      <div class="juego">
+        <img src="imagenes/juego1.webp" alt="Juego 1" class="juego-img">
+        <h3>Red Dead Redemption 2</h3>
+        <p>$39.99</p>
+        <button class="agregar-carrito">Agregar al carrito</button>
+      </div><br>
+      <div class="juego">
+        <img src="imagenes/juego2.jpg" alt="Juego 2" class="juego-img">
+        <h3>Grand Theft Auto IV</h3>
+        <p>$29.99</p>
+        <button class="agregar-carrito">Agregar al carrito</button>
+      </div>
+      <!-- más tarjetas -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SteamHub | Todos los derechos reservados</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
