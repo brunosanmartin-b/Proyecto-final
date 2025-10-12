@@ -10,17 +10,20 @@
 
   <!-- Header -->
   <header>
-    <div class="logo">SteamHub
-        <img src="imagenes/logo.png" alt="Logo de SteamHub" class="logo-img">
-    </div>
-    <!--Navegador de las demas paginas -->
-    <nav>
-        <button class="headerb"><a href="catalogo.html">Tienda</a></button>
-        <button class="headerb"><a href="carrito.html">Carrito</a></button>
-        <button class="headerb"><a href="login+register/login.html">Iniciar sesión</a></button>
-    </nav>
-    <input type="text" placeholder="Buscar juegos..." id="buscador" class="buscador">
-  </header>
+  <div class="logo">
+    SteamHub
+    <img src="imagenes/logo.png" alt="Logo de SteamHub" class="logo-img">
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <button class="headerb"><a href="catalogo.html">Tienda</a></button>
+    <button class="headerb"><a href="carrito.html">Carrito</a></button>
+    <button class="headerb"><a href="login+register/login.html">Iniciar sesión</a></button>
+    <!-- Botón del menú (solo visible en móviles) -->
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </nav>
+</header>
 
   <!-- Banner -->
   <section class="banner">
@@ -54,6 +57,6 @@
     <p>&copy; 2025 SteamHub | Todos los derechos reservados</p>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="menu.js"></script>
 </body>
 </html>
