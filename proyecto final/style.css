@@ -1,0 +1,119 @@
+:root {
+  --color-bg: #0e0e10;
+  --color-primary: #3a0ca3;   
+  --color-secondary: #4361ee; 
+  --color-accent: #7209b7;    
+  --color-text: #f1f1f1;      
+}/* defino la paleta de colores con variables para la pagina principal */
+
+/*reseteo los margenes y paddings de todos los elementos para evitar inconsistencias entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);/* color de fondo oscuro */
+    color: var(--color-text);/* color de texto claro */
+    line-height: 1.6;/* mejora la legibilidad del texto */
+    min-height: 100vh;/* asegura que el body ocupe al menos toda la altura de la ventana */
+    font-family: 'Poppins', sans-serif;/* fuente moderna y legible */
+    display: flex;/* uso flexbox para el layout */
+    flex-direction: column;/* organizo los elementos en columna */
+} /* estilos generales del body */
+
+.logo {
+    font-size: 2rem;/* tamaño de fuente grande */
+    font-weight: bold;/* fuente en negrita */
+    color: var(--color-bg);/* color del texto */
+    display: flex;/* uso flexbox para alinear el logo y el texto */
+    align-items: center;/* centro verticalmente los elementos */
+    justify-content: center;/* centro horizontalmente los elementos */
+}
+
+.logo-img {
+  height: 60px; /* altura del logo */
+  vertical-align: middle; /* alinea verticalmente con el texto */
+  margin-left: 10px; /* espacio entre el logo y el texto */
+}
+
+header {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));/* degradado de colores en el header */
+  padding: 10px;/* espacio interno */
+  text-align: center;/* centro el texto */
+}
+
+.buscador {
+    margin: 10px 0;/* margen arriba y abajo */
+    display: block;/* hace que el input ocupe toda la linea */
+    padding: 8px;/* espacio interno */
+    width: 50%;/* ancho del input */
+    max-width: 400px;/* ancho máximo para pantallas grandes */
+    border: 1.5px solid var(--color-accent);/* borde morado */
+    border-radius: 4px;/* bordes redondeados */
+    font-size: 1rem;/* tamaño de fuente */
+    background-color: var(--color-bg);/* color de fondo oscuro */
+    color: var(--color-text);/* color del texto claro */
+    margin-left: auto; /* centra el input horizontalmente */
+    margin-right: auto; /* centra el input horizontalmente */
+}
+
+.juego-img {
+    max-width: 100%; /* asegura que las imagenes no excedan el contenedor */
+    width: 400px; /* ajusta el ancho automáticamente */
+     height: auto; /* mantiene la proporción de las imagenes */
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--color-text);
+}
+
+main {
+  flex: 1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--color-primary);
+  padding: 10px;
+  text-align: center;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+.headerb {
+  background: #8b5cf6;/* color de fondo morado */
+  border: none;/* sin borde */
+  color: var(--color-text);/* color del texto */
+  font-size: 1rem;/* tamaño de fuente */
+  margin: 10px;/* espacio entre botones */
+  cursor: pointer;/* cursor de mano al pasar por encima */
+  transition: color 0.3s;/* transición suave para el color */
+}
+
+button {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+}

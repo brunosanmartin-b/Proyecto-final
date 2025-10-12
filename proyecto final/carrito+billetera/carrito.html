@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - SteamHub</title>
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 Tu Carrito</h1>
+    <div class="billetera">
+      Saldo: $<span id="saldo">1000</span>
+      <button id="recargar">Recargar</button>
+    </div>
+  </header>
+
+  <main>
+    <table id="carrito">
+      <thead>
+        <tr>
+          <th>Juego</th>
+          <th>Precio</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Vacío al inicio -->
+      </tbody>
+    </table>
+
+    <div class="total">
+      Total: $<span id="total">0</span>
+    </div>
+
+    <div class="botones-carrito">
+      <button id="comprar">Confirmar compra</button>
+      <button id="volver">Volver a la página principal</button>
+    </div>
+  </main>
+
+  <script src="carrito.js"></script>
+  <script src="billetera.js"></script>
+</body>
+</html>
