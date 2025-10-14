@@ -76,3 +76,19 @@ a {
   color: var(--color-secondary); /* link azul */
   text-decoration: none;
 }
+
+.volver-btn {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  padding: 8px;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.volver-btn:hover {
+  background-color: var(--color-accent);
+}

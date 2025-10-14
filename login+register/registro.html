@@ -3,26 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Steamhub - Registro</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"> <!-- link al css -->
 </head>
-<body>
-  <!-- Contenedor principal centrado -->
+<body class="registro"> <!-- clase registro para aislar estilos -->
+  
+  <!-- Contenedor central del formulario -->
   <div class="cuadro">
     <h1>Registrarse</h1>
-    
+
     <!-- Formulario de registro -->
     <form id="formRegistro">
-      <input type="text" id="nombre" placeholder="Nombre completo"> <!-- nombre del usuario -->
-      <input type="text" id="email" placeholder="Correo"> <!-- email del usuario -->
-      <input type="password" id="pass" placeholder="Contraseña"> <!-- contraseña -->
-      <input type="password" id="pass2" placeholder="Repetir contraseña"> <!-- repetir contraseña -->
-      <button type="submit">Crear cuenta</button> <!-- botón para enviar el formulario -->
+      <!-- Campo de nombre -->
+      <input type="text" id="nombre" placeholder="Nombre completo">
+      <!-- Campo de email -->
+      <input type="text" id="email" placeholder="Correo">
+      <!-- Campo de contraseña -->
+      <input type="password" id="pass" placeholder="Contraseña">
+      <!-- Repetir contraseña -->
+      <input type="password" id="pass2" placeholder="Repetir contraseña">
+      <!-- Botón de registro -->
+      <button type="submit">Crear cuenta</button>
     </form>
-    
+
+    <!-- Link para ir a la página de login -->
     <p>¿Ya tenés cuenta? <a href="login.html">Iniciá sesión</a></p>
+
+    <!-- 🔙 Botón para volver a la página principal -->
+    <a href="../pagina_principal.html" class="volver-btn">⬅ Volver a la página principal</a>
   </div>
 
-  <!-- Se llama al archivo JS para manejar el registro -->
+  <!-- Archivo JS para validar y guardar datos -->
   <script src="registro.js"></script>
 </body>
 </html>

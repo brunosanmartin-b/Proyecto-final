@@ -3,24 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Steamhub - Login</title>
-  <link rel="stylesheet" href="styles.css"> <!-- llamamos al css principal -->
+  <link rel="stylesheet" href="styles.css"> <!-- link al archivo de estilos -->
 </head>
-<body>
-  <!-- Contenedor principal centrado -->
+<body class="login"> <!-- clase login para que los estilos no interfieran con la página principal -->
+  
+  <!-- Contenedor central para el formulario -->
   <div class="cuadro">
     <h1>Iniciar Sesión</h1>
-    
-    <!-- Formulario de login -->
+
+    <!-- Formulario de inicio de sesión -->
     <form id="formLogin">
-      <input type="text" id="email" placeholder="Correo"> <!-- email del usuario -->
-      <input type="password" id="pass" placeholder="Contraseña"> <!-- contraseña del usuario -->
-      <button type="submit">Entrar</button> <!-- botón para enviar el formulario -->
+      <!-- Campo de email -->
+      <input type="text" id="email" placeholder="Correo">
+      <!-- Campo de contraseña -->
+      <input type="password" id="pass" placeholder="Contraseña">
+      <!-- Botón para enviar el formulario -->
+      <button type="submit">Entrar</button>
     </form>
-    
+
+    <!-- Link para ir a la página de registro -->
     <p>¿No tenés cuenta? <a href="registro.html">Registrate</a></p>
+
+    <!-- 🔙 Botón para volver a la página principal -->
+    <a href="../pagina_principal.html" class="volver-btn">⬅ Volver a la página principal</a>
   </div>
 
-  <!-- Se llama al archivo JS para manejar el login -->
+  <!-- Archivo JS para validación de login -->
   <script src="login.js"></script>
 </body>
 </html>
