@@ -1,3 +1,52 @@
+html, body {
+  height: 100%;
+}
+/* === Video de fondo === */
+
+.video-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Asegura que el contenido principal esté sobre el video */
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+header, footer {
+  position: relative;
+  z-index: 2;
+}
+
+header, footer {
+  position: relative;
+  z-index: 2;
+}
 :root {
   --color-bg: #0e0e10;
   --color-primary: #3a0ca3;   
@@ -48,6 +97,8 @@ header {
     max-width: 100%; /* asegura que las imagenes no excedan el contenedor */
     width: 400px; /* ajusta el ancho automáticamente */
      height: auto; /* mantiene la proporción de las imagenes */
+     margin-top: 25px; /* espacio superior */
+     border-radius: 7px; /* bordes redondeados */
 }
 
 header h1 {
@@ -131,20 +182,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* --- Vista celular --- */
-@media (max-width: 768px) {
-  /* @media es una regla de CSS que se usa para hacer que una página web sea responsive, es decir, que se adapte automáticamente al tamaño de pantalla (por ejemplo, celulares, tablets o monitores grandes). */
-  .menu {
-    display: none;
-    flex-direction: column;/* organizo los enlaces en columna */
-    background-color: var(--color-primary);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    padding: 1rem;
-    border-radius: 8px;
-  }
+
 
   .menu.active {
     /* cuando el menú está activo (visible) */
@@ -157,5 +195,22 @@ button:hover {
     position: absolute;
     right: 20px;
     top: 20px;
+  }
+}
+.video-background-container {
+
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-background {
+    width: auto;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 }
