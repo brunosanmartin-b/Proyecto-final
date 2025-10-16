@@ -1,7 +1,42 @@
+/* ================================
+   CONFIGURACIÓN GLOBAL
+================================== */
+
+/* Paleta de colores */
+:root {
+  --color-bg: #0e0e10;
+  --color-primary: #3a0ca3;
+  --color-secondary: #4361ee;
+  --color-accent: #7209b7;
+  --color-text: #f1f1f1;
+}
+
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente y estructura base */
 html, body {
   height: 100%;
 }
-/* === Video de fondo === */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ================================
+   VIDEO DE FONDO
+================================== */
 
 .video-background-container {
   position: fixed;
@@ -14,7 +49,6 @@ html, body {
   overflow: hidden;
 }
 
-
 .video-background {
   position: absolute;
   top: 0;
@@ -26,79 +60,34 @@ html, body {
   pointer-events: none;
 }
 
-/* Asegura que el contenido principal esté sobre el video */
+/* ================================
+   ESTRUCTURA PRINCIPAL
+================================== */
 
 main {
   position: relative;
   z-index: 1;
-}
-
-body {
-  position: relative;
-  min-height: 100vh;
-}
-
-header, footer {
-  position: relative;
-  z-index: 2;
+  flex: 1;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 header, footer {
   position: relative;
   z-index: 2;
 }
-:root {
-  --color-bg: #0e0e10;
-  --color-primary: #3a0ca3;   
-  --color-secondary: #4361ee; 
-  --color-accent: #7209b7;    
-  --color-text: #f1f1f1;      
-}/* defino la paleta de colores con variables para la pagina principal */
 
-/*reseteo los margenes y paddings de todos los elementos para evitar inconsistencias entre navegadores */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--color-bg);/* color de fondo oscuro */
-    color: var(--color-text);/* color de texto claro */
-    line-height: 1.6;/* mejora la legibilidad del texto */
-    min-height: 100vh;/* asegura que el body ocupe al menos toda la altura de la ventana */
-    font-family: 'Poppins', sans-serif;/* fuente moderna y legible */
-    display: flex;/* uso flexbox para el layout */
-    flex-direction: column;/* organizo los elementos en columna */
-} /* estilos generales del body */
-
-.logo {
-    font-size: 2rem;/* tamaño de fuente grande */
-    font-weight: bold;/* fuente en negrita */
-    color: var(--color-bg);/* color del texto */
-    display: flex;/* uso flexbox para alinear el logo y el texto */
-    align-items: center;/* centro verticalmente los elementos */
-    justify-content: center;/* centro horizontalmente los elementos */
-}
-
-.logo-img {
-  height: 60px; /* altura del logo */
-  vertical-align: middle; /* alinea verticalmente con el texto */
-  margin-left: 10px; /* espacio entre el logo y el texto */
-}
+/* ================================
+   HEADER
+================================== */
 
 header {
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));/* degradado de colores en el header */
-  padding: 10px;/* espacio interno */
-  text-align: center;/* centro el texto */
-}
-
-.juego-img {
-    max-width: 100%; /* asegura que las imagenes no excedan el contenedor */
-    width: 400px; /* ajusta el ancho automáticamente */
-     height: auto; /* mantiene la proporción de las imagenes */
-     margin-top: 25px; /* espacio superior */
-     border-radius: 7px; /* bordes redondeados */
+  background: linear-gradient(90deg, #5a00d3, #7c2ae8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  color: white;
 }
 
 header h1 {
@@ -106,71 +95,111 @@ header h1 {
   color: var(--color-text);
 }
 
-main {
-  flex: 1;
-  padding: 40px 20px;
-  text-align: center;
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-bg);
 }
 
-footer {
-  background-color: var(--color-primary);
-  padding: 10px;
-  text-align: center;
-  color: var(--color-text);
-  font-size: 0.9rem;
+.logo-img {
+  height: 60px;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
-a {
-  color: var(--color-text);
-  text-decoration: none;
-  transition: 0.3s;
-}
+/* ================================
+   MENÚ DE NAVEGACIÓN
+================================== */
 
-a:hover {
-  color: var(--color-accent);
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
 }
 
 .headerb {
-  background: #8b5cf6;/* color de fondo morado */
-  border: none;/* sin borde */
-  color: var(--color-text);/* color del texto */
-  font-size: 1rem;/* tamaño de fuente */
-  margin: 10px;/* espacio entre botones */
-  cursor: pointer;/* cursor de mano al pasar por encima */
-  transition: color 0.3s;/* transición suave para el color */
+  background-color: #8b5cf6;
+  color: white;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
 }
 
+.headerb:hover {
+  background-color: #a678ff;
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Efecto de clic (cuando se presiona el botón) */
+.headerb:active {
+  transform: scale(0.98) translateY(1px);
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* ================================
+    CONTENIDO PRINCIPAL
+================================== */
+
+.juego-img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  margin-top: 25px;
+  border-radius: 7px;
+}
+
+/* ================================
+   MENÚ RESPONSIVE
+================================== */
+
 button {
-  background-color: var(--color-accent);
-  color: var(--color-text);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s;
+  background-color: var(--color-accent);
+  color: white;
+  transition: background-color 0.3s ease;
+  border: none;
 }
 
 button:hover {
-  background-color: var(--color-secondary);
+  background-color: darken(var(--color-accent), 10%);
+  background-color: #a678ff;
+  transform: scale(1.05) translateY(-3px);
+  transition: all 0.3s ease;
+ box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+  
 }
 
-/* === Menú responsive === */
 .menu {
-  display: flex;/* uso flexbox para el menú */
-  gap: 1rem;/* espacio entre los enlaces */
-  justify-content: center;/* centro horizontalmente */
-  align-items: center;/* centro verticalmente */
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu a {
   color: var(--color-text);
-  text-decoration: none;/* sin subrayado */
-  padding: 8px 12px;/* espacio interno */
-  font-weight: 500;/* fuente semi-negrita */
+  text-decoration: none;
+  padding: 8px 12px;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .menu a:hover {
-  color: var(--color-accent);/* cambio de color al pasar el ratón */
+  color: var(--color-accent);
 }
 
 .menu-toggle {
@@ -182,28 +211,39 @@ button:hover {
   cursor: pointer;
 }
 
+.menu.active {
+  display: flex;
+}
 
-
-  .menu.active {
-    /* cuando el menú está activo (visible) */
-    display: flex;
+/* Mostrar menú toggle solo en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px;
   }
 
   .menu-toggle {
-    /* hago visible el botón del menú en celulares */
     display: block;
     position: absolute;
     right: 20px;
     top: 20px;
   }
-}
-.video-background-container {
 
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-
+  .menu.active {
+    display: flex;
+  }
 }
+
+/* ================================
+    VIDEO RESPONSIVE
+================================== */
 
 @media (max-aspect-ratio: 16/9) {
   .video-background {
@@ -214,3 +254,30 @@ button:hover {
     transform: translateY(-50%);
   }
 }
+
+/* ================================
+    FOOTER
+================================== */
+
+footer {
+  background-color: var(--color-primary);
+  padding: 10px;
+  text-align: center;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+/* ================================
+   ENLACES GENERALES
+================================== */
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
