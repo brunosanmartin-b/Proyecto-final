@@ -1,14 +1,22 @@
+:root {
+  --color-bg: #0e0e10;
+  --color-primary: #3a0ca3;
+  --color-secondary: #4361ee;
+  --color-accent: #7209b7;
+  --color-text: #f1f1f1;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
+  background-color: var(--color-bg);
   color: #333;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #2e2eaa;
-  color: white;
+  background: linear-gradient(90deg, #5a00d3, #7c2ae8);
+  color: var(--color-text);
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -24,23 +32,30 @@ h1 {
 }
 
 button {
-  background-color: #2e2eaa;
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-text);
   border: none;
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #4545c9;
+  background-color: #a678ff;
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
 }
 
 table {
   width: 90%;
   margin: 20px auto;
   border-collapse: collapse;
-  background-color: white;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 10px;
+
 }
 
 th, td {
@@ -53,6 +68,7 @@ th, td {
   text-align: right;
   margin-right: 10%;
   font-size: 1.2rem;
+  color: var(--color-text);
 }
 
 .botones-carrito {
