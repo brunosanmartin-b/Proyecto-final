@@ -151,14 +151,64 @@ nav {
     CONTENIDO PRINCIPAL
 ================================== */
 
+.grid-juegos {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0 10px;
+}
+
 .juego-img {
   max-width: 100%;
-  width: 400px;
+  width: 350px;
   height: auto;
   margin-top: 25px;
   border-radius: 7px;
 }
 
+.juego {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #3a0ca3 0%, #7c2ae8 50%, #a678ff 100%);
+  padding: 16px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 1000px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 8px 20px rgba(58,12,163,0.18);
+}
+
+.descripcion-juego {
+  background-color: rgba(58, 12, 163, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 450px;
+  text-align: left;
+}
+
+.noticias {
+  background-color: rgba(58, 12, 163, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 650px;
+  text-align: left;
+  display: flex;
+}
+
+.noticias-descripcion{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+  color: var(--color-text);
+}
 /* ================================
    MENÚ RESPONSIVE
 ================================== */
