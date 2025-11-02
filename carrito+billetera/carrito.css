@@ -1,5 +1,5 @@
 :root {
-  --color-bg: #0e0e10;
+  --color-bg: #313131;
   --color-primary: #3a0ca3;
   --color-secondary: #4361ee;
   --color-accent: #7209b7;
@@ -55,13 +55,13 @@ table {
   background-color: var(--color-primary);
   color: white;
   border-radius: 10px;
-
+  box-shadow: 0 4px 8px var(--color-accent);
 }
 
 th, td {
   padding: 10px;
   text-align: center;
-  border-bottom: 1px solid #ccc;
+  border-color: white;
 }
 
 .total {

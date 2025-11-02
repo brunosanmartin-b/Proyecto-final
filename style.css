@@ -181,6 +181,11 @@ nav {
   box-shadow: 0 8px 20px rgba(58,12,163,0.18);
 }
 
+.juego:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
 .descripcion-juego {
   background-color: rgba(58, 12, 163, 0.8);
   color: white;
@@ -191,21 +196,23 @@ nav {
   text-align: left;
 }
 
+.noti{
+  display: flex;
+  gap: 12px;
+}
 .noticias {
   background-color: rgba(58, 12, 163, 0.8);
   color: white;
   padding: 5px;
   border-radius: 10px;
-  margin: 20px auto;
-  max-width: 650px;
+  margin: 0 30px;
+  max-width: 550px;
   text-align: left;
-  display: flex;
 }
 
 .noticias-descripcion{
-  display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   color: var(--color-text);
 }
@@ -229,7 +236,7 @@ button:hover {
   background-color: #a678ff;
   transform: scale(1.05) translateY(-3px);
   transition: all 0.3s ease;
- box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
   
 }
 
@@ -310,11 +317,15 @@ button:hover {
 ================================== */
 
 footer {
-  background-color: var(--color-primary);
+  background: linear-gradient(90deg, #5a00d3, #7c2ae8);
   padding: 10px;
   text-align: center;
   color: var(--color-text);
   font-size: 0.9rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* ================================
