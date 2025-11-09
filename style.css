@@ -44,9 +44,9 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
+  z-index: -1;/* Asegura que el video esté detrás del contenido */
+  pointer-events: none;/* Evita que el video interfiera con la interacción del usuario */
+  overflow: hidden;/* Oculta cualquier desbordamiento del video */
 }
 
 .video-background {
@@ -84,7 +84,7 @@ header, footer {
 header {
   background: linear-gradient(90deg, #5a00d3, #7c2ae8);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;/* Espacio entre logo y título */
   align-items: center;
   padding: 15px 50px;
   color: white;
@@ -150,7 +150,7 @@ nav {
 
 /* Badge del contador del carrito */
 .cart-badge {
-  position: absolute;
+  position: absolute;/* Posición absoluta respecto al botón */
   top: -8px;
   right: -8px;
   background-color: #22c55e;
@@ -224,7 +224,7 @@ nav {
 
 .noti{
   display: flex;
-  gap: 12px;
+  gap: 12px;/* Espacio entre imagen y descripción */
 }
 .noticias {
   background-color: rgba(58, 12, 163, 0.8);
@@ -300,6 +300,7 @@ button:hover {
 
 /* Mostrar menú toggle solo en pantallas pequeñas */
 @media (max-width: 768px) {
+  /* Ocultar el menú por defecto */
   .menu {
     display: none;
     flex-direction: column;
